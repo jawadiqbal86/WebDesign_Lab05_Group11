@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-color: #ffffff;
+text-align: center;
+font-family: Arial, sans-serif;
+background-size: 200px auto;
+background-position: center;
+}
+h1 { color: #cc00cc; font-size: 36px; }
+p { color: #2000ff; font-size: 20px; }
+
+button {
+background-color: #cc00cc; color: white;
+padding: 12px 20px; border: none;
+border-radius: 8px; cursor: pointer;
+}
+button:hover { background-color: #ff66cc; }
+.bg-active {
+      background-image: url('C:/Users/Jawad/Desktop/ict lab5/Confetti.gif');
+    }
+        .center-container {
+        text-align: center;
+        }
+ 
+</style>
+</head>
+<body>
+<h1>
+🎉 Happy Birthday, Aqib Javed Kiyani!
+🎂</h1>
+<p>Wishing you a day full of joy, laughter, and cake!</p>
+<img src="C:/Users/Jawad/Desktop/ict lab5/cake.png" width="200">
+<br>
+<a href="https://youtu.be/K2aJTT29ZdU?si=92ANukOSt3vFsLlQ"
+target="_blank">
+<button>Click for song!
+🎶</button>
+</a>
+<button onclick="toggleBackground()">Click to Celebrate</button>
+
+  <script>
+    function toggleBackground() {
+      document.body.classList.toggle('bg-active');
+    }
+  </script>
+<title>Happy Birthday!</title>
+<a>
+    <div class="center-container"></div>
+        <h1>Click To Have fun</h1>
+      <button onclick="nextImage()">Next Image</button>
+      <br>
+        <img id="displayedImage" width="350">
+    <script>
+        const images = [
+    "C:/Users/Jawad/Desktop/ict lab5/birthday1.gif",
+    "C:/Users/Jawad/Desktop/ict lab5/birthday2.gif",
+    "C:/Users/Jawad/Desktop/ict lab5/birthday3.gif",
+    "C:/Users/Jawad/Desktop/ict lab5/birthday4.gif",
+    "C:/Users/Jawad/Desktop/ict lab5/birthday5.gif"
+    ];
+
+    let current = 0;
+
+    function nextImage() {
+      current = (current + 1) % images.length;
+      const img = document.getElementById('displayedImage');
+      setTimeout(() => {
+        img.src = images[current];
+      }, 300);
+    }
+    </script>
+</a>
+
+</body>
+    </style>
+</html>
